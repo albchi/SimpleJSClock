@@ -1,0 +1,57 @@
+<html>
+
+
+   <head> 
+      <title>JavaScript & NGINX : a little running clock </title>
+      <link rel="stylesheet" type="text/css" href="mystyle.css">
+   </head> 
+
+   <body>
+
+      <h2> Albert's Dashboard </h2>
+
+      <div id="id0"></div>
+
+      <div id="id1"></div>
+
+      <div id="id2"></div>
+
+      <script type="text/javascript">
+
+            var varlocaldir = window.location.pathname;
+            console.log(varlocaldir);
+ 
+
+            function showTime() {
+               var date = new Date();
+               var h = date.getHours();
+               var m = date.getMinutes();
+               var s = date.getSeconds();
+               var utc = date.getTime();
+
+
+               var time = h + ":" + m + ":" + s;
+               document.getElementById("id3").innerText = time;
+               document.getElementById("id4").innerText = time;
+               document.getElementById("id5").innerText = date.getTimezoneOffset();
+            }
+
+            setInterval(showTime, 1000);
+
+         </script>
+        <table>
+           <thead>
+              <tr> 
+                 <th> Time Zones</th> 
+              </tr>
+           </thead>
+           <tbody>
+              <tr>
+                 <td> Palo Alto</td> <td> <div id="id3"> </div></td>
+              </tr>
+           </tbody>
+        </table>
+
+  </body>
+</html>
+
