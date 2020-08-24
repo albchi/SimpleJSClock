@@ -1,8 +1,8 @@
 #!/bin/bash
 
 docker run \
---name nginxtime89 \
--v /Users/chiangal/Learn/DockerNginxJsClockTmp:/usr/share/nginx/html:ro \
--p 89:80 \
+--name nginxtime83 \
+-v /Users/chiangal/DockerNginxJsClockTmp:/usr/share/nginx/html:ro \
+-p 83:80 \
 -d \
 nginx
